@@ -4,6 +4,14 @@ material design template
 ..진행중..
 http://mateuitemplate.surge.sh/
 
+## 진행현황
+- list : 같은 listcard 디자인 구현완료
+- tab : slide구현완료, 그 외 보류
+- post : TODO_APP구현완료, 그 외 보류
+- chart : 보류
+- search : 간단한 비동기 구현완료
+
+
 ## stack
 - es6
 - react.js
