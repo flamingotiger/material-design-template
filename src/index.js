@@ -1,7 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Root from './App';
-import registerServiceWorker from './registerServiceWorker';
+// https://github.com/diegohaz/arc/wiki/Atomic-Design#do-not-worry
+const req = require.context('.', true, /\.\/[^/]+\/[^/]+\/index\.js$/)
 
-ReactDOM.render(<Root />, document.getElementById('root'));
-registerServiceWorker();
+req.keys().forEach((key) => {
+  const componentName = key.replace(/^.+\/([^/]+)\/index\.js/, '$1')
+  module.exports[componentName] = req(key).default
+})
